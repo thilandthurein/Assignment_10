@@ -13,6 +13,7 @@ class StudentController extends Controller
    		$data=[
    			'students'=>$students
    		];
+   		
         return view('studentupdate',$data);
    }
 
@@ -56,7 +57,9 @@ class StudentController extends Controller
    public function destroytime($id){
    		$category=DB::table('students')
                     ->where('id',$id)
-                    ->update(['deleted_at'=>carbon::now()]);
+                     ->update([
+                        'deleted_at'=>Carbon::now(),
+                      ]);
         return redirect()->route('regindex');
    }
 

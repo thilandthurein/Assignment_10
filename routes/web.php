@@ -23,10 +23,15 @@ Route::get('/register',function(){
 
 Route::get('/regshow','StudentController@index')->name('regindex');
 Route::get('/regshow/{id}','StudentController@show')->name('regshow');
+
 Route::post('/regshow','StudentController@store')->name('regstore');
 Route::put('/regshow/{id}','StudentController@update')->name('regupdate');
-Route::post('/regshow/{id}','StudentController@destroy')->name('regdestroy');
-Route::delete('/regshow/{id}','StudentController@destroytime')->name('regdestroytime');
+Route::delete('/regshow/{id}','StudentController@destroy')->name('regdestroy');
+Route::delete('/regshow/d/{id}','StudentController@destroytime')->name('regdestroytime');
 
 
 
+
+Route::get('disneyplus/list', 'DisneyplusController@index')->name('disneyplus.index');
+Route::get('disneyplus', 'DisneyController@create')->name('disneyplus.create');
+Route::post('disneyplus', 'DisneyController@store')->name('disneyplus.store');

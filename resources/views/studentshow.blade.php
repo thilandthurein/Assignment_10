@@ -30,6 +30,10 @@
       <label for="sex">Sex</label>
       <input type="text" class="form-control" id="sex" name="sex" value="{{$student->sex}}">
     </div>
+    <div class="form-group">
+      <label for="phone">Phone</label>
+      <input type="text" class="form-control" id="sex" name="phone" value="{{$student->phone}}">
+    </div>
      
      <button type="submit" class="btn btn-primary">Update</button>
 
